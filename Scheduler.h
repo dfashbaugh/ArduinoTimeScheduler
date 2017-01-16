@@ -1,4 +1,6 @@
-//#define ARDUINO
+#ifdef ARDUINO
+#include "Arduino.h"
+#endif
 
 typedef void (*funcToRepeat)(void);
 
