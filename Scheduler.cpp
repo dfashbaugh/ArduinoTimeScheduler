@@ -16,3 +16,17 @@ void FunctionScheduler::AddFunction(funcToRepeat function, unsigned long interva
 	FuncArray[curMaxFunctions] = newFuncAndTime;
 	curMaxFunctions++;
 }
+
+void FunctionScheduler::RunFunctions()
+{
+	for(int i = 0; i < curMaxFunctions; i++)
+	{
+		unsigned long curTime = 0;
+
+		if(curTime - FuncArray[i].lastTime > FuncArray[i].interval)
+		{
+			FuncArray[i].theFunction();
+			FuncArray[i].lastTime = curTime;
+		}
+	}
+}

@@ -14,6 +14,7 @@ public:
 	~FunctionScheduler() {};
 
 	void AddFunction(funcToRepeat function, unsigned long interval);
+	void RunFunctions();
 
 private:
 	FunctionAndTime* FuncArray;
