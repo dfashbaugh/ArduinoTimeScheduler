@@ -4,7 +4,7 @@ Very basic system to schedule tasks to run at predefined intervals on Arduino
 
 Simply define a function, then give it an interval. The function will run every time that number of milliseconds passes.
 
-Also, this is a basic synchronous library. These aren't based on timer interrupts. Its just a basic way to avoid delays and to cleanly do periodic things! But don't bet your life on its timing ability.
+Also, this is a basic synchronous library. These aren't based on timer interrupts. Its just a basic way to avoid delays and to cleanly do periodic things! Don't bet your life on its timing ability.
 
 ## Usage
 
