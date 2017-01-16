@@ -21,7 +21,7 @@ void FunctionScheduler::RunFunctions()
 {
 	for(int i = 0; i < curMaxFunctions; i++)
 	{
-		unsigned long curTime = 0;
+		unsigned long curTime = 11;
 
 		if(curTime - FuncArray[i].lastTime > FuncArray[i].interval)
 		{
