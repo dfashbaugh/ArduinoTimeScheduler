@@ -23,4 +23,5 @@ public:
 private:
 	FunctionAndTime* FuncArray;
 	int curMaxFunctions;
+	int maxFunctions;
 };
