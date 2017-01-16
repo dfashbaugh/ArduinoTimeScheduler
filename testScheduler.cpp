@@ -5,29 +5,40 @@
 
 using namespace std;
 
-void TestMe()
+int testVal1 = 0;
+int testVal2 = 0;
+
+void testAdd1()
 {
-	cout << "TESTED";
+	testVal1++;
 }
 
-void TestThis()
+void testAdd2()
 {
-	cout << "Test This!";
+	testVal2++;
 }
 
 FunctionScheduler myScheduler(3);
 
 int main(void)
 {
-	cout << "Hello" << endl;
-	myScheduler.AddFunction(TestMe, 10);
-	myScheduler.AddFunction(TestThis, 10);
+	cout << "Begin Quick Test!" << endl;
+	myScheduler.AddFunction(testAdd1, 5);
+	myScheduler.AddFunction(testAdd2, 10);
 
-	for(int i = 0; i < 30; i++)
+	for(int i = 0; i < 35; i++)
 	{
-		cout << "Outputs At " << i << ": ";
 		myScheduler.RunFunctions(i);
-		cout << endl;
+		cout << "Outputs At " << i << ": " << testVal1 << " " << testVal2 << endl;
+	}
+
+	if(testVal1 == 5 && testVal2 == 3)
+	{
+		cout << "Test Successful" << endl;
+	}
+	else
+	{
+		cout << "Test Failed" << endl;
 	}
 
 	return 0;
