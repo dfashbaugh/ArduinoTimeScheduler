@@ -23,6 +23,10 @@ void FunctionScheduler::RunFunctions(unsigned long testTime)
 	{
 		unsigned long curTime = 0;
 
+#ifdef ARDUINO
+		curTime = millis();
+#endif
+
 		if(testTime > 0)
 		{
 			curTime = testTime;

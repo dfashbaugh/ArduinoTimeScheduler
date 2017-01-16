@@ -1,3 +1,5 @@
+//#define ARDUINO
+
 typedef void (*funcToRepeat)(void);
 
 struct FunctionAndTime
