@@ -13,6 +13,8 @@ public:
 	FunctionScheduler(int numFunctions);
 	~FunctionScheduler() {};
 
+	void AddFunction(funcToRepeat function, unsigned long interval);
+
 private:
 	FunctionAndTime* FuncArray;
 	int curMaxFunctions;
