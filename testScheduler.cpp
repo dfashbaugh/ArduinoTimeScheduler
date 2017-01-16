@@ -15,7 +15,7 @@ int main(void)
 	cout << "Hello" << endl;
 	myScheduler.AddFunction(TestMe, 10);
 
-	myScheduler.RunFunctions();
+	myScheduler.RunFunctions(11);
 
 	return 0;
 }

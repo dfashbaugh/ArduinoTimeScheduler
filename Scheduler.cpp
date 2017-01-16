@@ -17,11 +17,16 @@ void FunctionScheduler::AddFunction(funcToRepeat function, unsigned long interva
 	curMaxFunctions++;
 }
 
-void FunctionScheduler::RunFunctions()
+void FunctionScheduler::RunFunctions(unsigned long testTime)
 {
 	for(int i = 0; i < curMaxFunctions; i++)
 	{
-		unsigned long curTime = 11;
+		unsigned long curTime = 0;
+
+		if(testTime > 0)
+		{
+			curTime = testTime;
+		}
 
 		if(curTime - FuncArray[i].lastTime > FuncArray[i].interval)
 		{
