@@ -1,3 +1,5 @@
+#ifndef ARDUINO
+
 #include <iostream>
 #include "Scheduler.h"
 
@@ -30,3 +32,5 @@ int main(void)
 
 	return 0;
 }
+
+#endif
